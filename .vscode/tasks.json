@@ -1,0 +1,83 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build - Debug",
+      "command": "msbuild",
+      "args": [
+        "-t:Build",
+        "-p:Configuration=Debug",
+        "-p:GenerateFullPaths=true",
+        "-clp:NoSummary"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    },
+    {
+      "label": "Build - Release",
+      "command": "msbuild",
+      "args": [
+        "-t:Build",
+        "-p:Configuration=Release",
+        "-p:GenerateFullPaths=true",
+        "-clp:NoSummary"
+      ],
+      "problemMatcher": "$msCompile",
+      "group": "build"
+    },
+    {
+      "label": "Rebuild - Debug",
+      "command": "msbuild",
+      "args": [
+        "-t:Rebuild",
+        "-p:Configuration=Debug",
+        "-p:GenerateFullPaths=true",
+        "-clp:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Rebuild - Release",
+      "command": "msbuild",
+      "args": [
+        "-t:Rebuild",
+        "-p:Configuration=Release",
+        "-p:GenerateFullPaths=true",
+        "-clp:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Clean - Debug",
+      "command": "msbuild",
+      "args": [
+        "-t:Clean",
+        "-p:Configuration=Debug",
+        "-p:GenerateFullPaths=true",
+        "-clp:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Clean - Release",
+      "command": "msbuild",
+      "args": [
+        "-t:Clean",
+        "-p:Configuration=Release",
+        "-p:GenerateFullPaths=true",
+        "-clp:NoSummary"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "Restore Packages",
+      "command": "nuget",
+      "args": [
+        "restore",
+        "-packagesdirectory",
+        "packages"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
