@@ -94,7 +94,7 @@ namespace RDCurrentLevel
 
     private static string GetPath(int index)
     {
-      var root = Path.Combine(Directory.GetParent(Persistence.GetSavePath()).FullName, "CurrentLevel");
+      var root = Path.Combine(Directory.GetParent(Persistence.GetSaveFileFolderPath()).FullName, "CurrentLevel");
       if (!Directory.Exists(root))
         Directory.CreateDirectory(root);
       return Path.Combine(root, $"{index}.txt");
